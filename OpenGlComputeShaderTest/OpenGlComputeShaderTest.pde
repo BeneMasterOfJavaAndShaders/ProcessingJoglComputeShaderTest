@@ -12,7 +12,7 @@ import java.nio.IntBuffer;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 
-final String cmoputeShaderTest
+final String computeShaderTest
   = "#version 430 core \n"
   + "#extension GL_ARB_compute_variable_group_size : enable \n"
   + "layout (local_size_variable) in; \n"        //+ "layout (local_size_x = 8, local_size_y = 8, local_size_z = 1) in; \n"
@@ -40,7 +40,7 @@ ComputeShader cs;
 void setup() {
   println("Started");
   surface.setVisible(false);
-  cs = new ComputeShader(cmoputeShaderTest, 1);
+  cs = new ComputeShader(computeShaderTest, 1);
   cs.runTest();
   println("setup done.");
 }
